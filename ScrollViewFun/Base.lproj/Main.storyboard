@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,48 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJH-BZ-WpE">
+                                <rect key="frame" x="-4" y="16" width="383" height="636"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vpg-BE-TL3">
+                                        <rect key="frame" x="0.0" y="0.0" width="2054" height="636"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sadness" translatesAutoresizingMaskIntoConstraints="NO" id="dO2-B0-Tnx">
+                                                <rect key="frame" x="0.0" y="0.0" width="406" height="636"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Joy" translatesAutoresizingMaskIntoConstraints="NO" id="AWe-h7-DUK">
+                                                <rect key="frame" x="406" y="0.0" width="406" height="636"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fear" translatesAutoresizingMaskIntoConstraints="NO" id="bJ8-21-Tlj">
+                                                <rect key="frame" x="812" y="0.0" width="416" height="636"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disgust" translatesAutoresizingMaskIntoConstraints="NO" id="rLM-Mr-oEH">
+                                                <rect key="frame" x="1228" y="0.0" width="414" height="636"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Anger" translatesAutoresizingMaskIntoConstraints="NO" id="1Ju-fA-ZnL">
+                                                <rect key="frame" x="1642" y="0.0" width="412" height="636"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="vpg-BE-TL3" firstAttribute="top" secondItem="wJH-BZ-WpE" secondAttribute="top" id="1dY-La-6I7"/>
+                                    <constraint firstItem="vpg-BE-TL3" firstAttribute="trailing" secondItem="wJH-BZ-WpE" secondAttribute="trailing" id="DUr-KZ-dIh"/>
+                                    <constraint firstItem="vpg-BE-TL3" firstAttribute="leading" secondItem="wJH-BZ-WpE" secondAttribute="leading" id="FY7-ny-8Qe"/>
+                                    <constraint firstItem="vpg-BE-TL3" firstAttribute="bottom" secondItem="wJH-BZ-WpE" secondAttribute="bottom" id="utL-wL-1mN"/>
+                                    <constraint firstItem="vpg-BE-TL3" firstAttribute="height" secondItem="wJH-BZ-WpE" secondAttribute="height" id="yKu-sa-nHv"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="wJH-BZ-WpE" secondAttribute="trailing" constant="-20" id="BhX-yz-daZ"/>
+                            <constraint firstItem="wJH-BZ-WpE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Eeh-Yl-F8a"/>
+                            <constraint firstItem="wJH-BZ-WpE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aab-Rb-g7b"/>
+                            <constraint firstItem="wJH-BZ-WpE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zyP-0r-Kdo"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -25,4 +67,11 @@
             <point key="canvasLocation" x="281.5" y="396.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Anger" width="412" height="634"/>
+        <image name="Disgust" width="414" height="630"/>
+        <image name="Fear" width="416" height="634"/>
+        <image name="Joy" width="406" height="636"/>
+        <image name="Sadness" width="406" height="636"/>
+    </resources>
 </document>
